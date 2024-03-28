@@ -9,10 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        'airbnb': 'url("/airbnb.jpg")',
       },
+      backgroundColor:{
+        // "blue-green" : "19E4E4",
+        "gray" : "333333",
+        "secondary-color" : "AD419B",
+        "logo" : "FD868A",
+        "primary-color" : "000000"
+      }
+    
     },
   },
   plugins: [],
