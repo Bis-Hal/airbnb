@@ -9,7 +9,7 @@ const Horizontal_Nav_Bar_Item = ({ icon = faBars, url = "" }) => {
       <div className='group flex flex-col justify-between items-center h-full mr-24 hover:cursor-pointer'>
         <div></div>
         <FontAwesomeIcon icon={icon} className="" style={{ color: "#000000", width: "20px", height: "20px", }} />
-        <div className='group-hover:bg-black h-1 w-8 rounded-xl'></div>
+        <div className='group-hover:bg-secondary h-1 w-8 rounded-xl'></div>
       </div>
     </Link>
 
