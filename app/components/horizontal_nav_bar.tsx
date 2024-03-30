@@ -18,7 +18,7 @@ const Horizontal_Nav_Bar = () => {
       </div>
       <div className='flex justify-between items-center'>
         <div className='w-44 text-right'>{user_name}</div>
-        <div className='bg-usa rounded-full w-14 h-14 bg-cover ring-2 ring-black ml-2'></div>
+        <div className='bg-usa rounded-full w-10 h-10 bg-cover ring-2 ring-black ml-2'></div>
 
       </div>
     </div>

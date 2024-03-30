@@ -16,13 +16,17 @@ const config: Config = {
         'airbnb': 'url("/airbnb.jpg")',
         'usa': 'url("/usa.jpeg")',
       },
-      backgroundColor:{
-        // "blue-green" : "19E4E4",
-        "gray" : "333333",
-        "secondary-color" : "AD419B",
-        "logo" : "FD868A",
-        "primary-color" : "000000"
-      }
+      colors:{
+        "primary" : "#000000",
+        "secondary" : "#ffffff"
+      },
+      // backgroundColor:{
+      //   // "blue-green" : "19E4E4",
+      //   "gray" : "333333",
+      //   "secondary-color" : "#AD419B",
+      //   "logo" : "FD868A",
+      //   "primary-color" : "#000000"
+      // }
     
     },
   },
