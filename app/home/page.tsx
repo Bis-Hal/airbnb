@@ -1,23 +1,28 @@
 import { faAirbnb, faFacebook, faGoogle, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
-import { app_name, associated_cities, cities, copy_right, slogon } from '../utils/airBnbConstants'
+import { app_name, associated_cities, cities, copy_right, explore, slogon } from '../utils/airBnbConstants'
 import Horizontal_Nav_Bar from '../components/horizontal_nav_bar'
 import { faCopyright } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
+import { DASHBOARD_URL } from '../utils/url'
 
 const Home = () => {
     return (
         <div>
             <Horizontal_Nav_Bar />
             {/* hero section */}
-            <section className=' bg-black h-96 flex flex-col justify-between items-center'>
+            <section className=' bg-primary h-96 flex flex-col justify-between items-center'>
                 <div className='flex justify-between items-center w-full p-10'>
-                    <div className='bg-h-logo bg-cover w-56 h-20 '></div>
+                    <Link href={DASHBOARD_URL}><div className='text-bold text-xl text-primary p-2 mt-16 ml-24 bg-secondary rounded-lg w-72 text-center'>
+                        {explore}
+                    </div>
+                    </Link>
 
-                    <div className='flex flex-col justify-center items-end'>
-                        <div className='text-white'>/{cities}</div>
-                        <div className='text-white pt-2 pb-2 text-6xl'>{associated_cities}</div>
-                        <div className='text-white pe'>{slogon}</div>
+                    <div className='flex flex-col justify-center items-end text-secondary'>
+                        <div className=''>{cities}</div>
+                        <div className='pt-2 pb-2 text-6xl'>{associated_cities}</div>
+                        <div>{slogon}</div>
                     </div>
                 </div>
                 <div className='relative w-full h-72 flex'>
@@ -31,10 +36,10 @@ const Home = () => {
             <div className='h-96'>
                 Content
             </div>
-            <section className='h-96 bg-black flex flex-col justify-between'>
+            <section className='h-96 bg-primary flex flex-col justify-between'>
                 <div className='flex flex-col items-center justify-center'>
                     <FontAwesomeIcon icon={faAirbnb} className='h-16 w-16' style={{ color: '#ffffff' }} />
-                    <div className='text-white p-2 text-bold text-3xl'>{app_name}</div>
+                    <div className='text-secondary p-2 text-bold text-3xl'>{app_name}</div>
                 </div>
                 <div>
                     <div className='text-center w-full text-secondary font-bold'>Contact Us</div>

@@ -30,22 +30,43 @@ export const options = {
     },
     title: {
       display: true,
-      text: 'Sample Line Chart',
     },
   },
 };
 
 export const data = {
   labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+
   datasets: [
     {
-      label: 'Dataset 1',
+      label: "Thailand",
       tension: 0.4,
       data: [65, 59, 80, 81, 56, 55, 40],
       borderColor: 'rgb(0, 0, 0)',
       backgroundColor: 'rgba(255, 255, 255, 0.5)',
     },
-    // Add more datasets here if needed
+    // {
+    //   label: "England",
+    //   tension: 0.4,
+    //   data: [70, 20, 40, 21, 76, 65, 70],
+    //   borderColor: 'rgb(255, 0, 0,1)',
+    //   backgroundColor: '',
+    // },
+    // {
+    //   label: "USA",
+    //   tension: 0.4,
+    //   data: [10, 20, 30, 25, 36, 35, 40],
+    //   borderColor: 'rgb(0, 255, 0,1)',
+    //   backgroundColor: '',
+    // },
+    // {
+    //   label: "Spain",
+    //   tension: 0.4,
+    //   data: [100, 90, 95, 100, 96, 55, 90],
+    //   borderColor: 'rgb(0, 0, 255,1)',
+    //   backgroundColor: '',
+    // },
+  
   ],
 };
 
