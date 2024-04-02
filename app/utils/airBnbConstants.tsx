@@ -11,7 +11,7 @@ export const account_exist_qa = "Don\'t have an account?";
 export const copy_right = "Copyright 2024;";
 export const explore = "Explore";
 export const dashboard_counties_ranting_section_heading = "Top Countries";
-
+export const dashboard = "Dashboard";
 
 
 export const user_name = "Pramudita Thapaliya"
@@ -31,7 +31,7 @@ export const navBarItems ={
     "Home":[
         {
             "icon": faHouse,
-            "label":"Dashboard",
+            "label":dashboard,
             "url": DASHBOARD_URL
         },
         {

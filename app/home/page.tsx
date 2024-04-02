@@ -9,7 +9,7 @@ import { DASHBOARD_URL } from '../utils/url'
 
 const Home = () => {
     return (
-        <div>
+        <>
             <Horizontal_Nav_Bar />
             {/* hero section */}
             <section className=' bg-primary h-96 flex flex-col justify-between items-center'>
@@ -56,12 +56,11 @@ const Home = () => {
 
                     </div>
                 </div>
-
                 <div className='h-16 bg-zinc-950 text-secondary flex items-center justify-center w-full'>{copy_right}
                     <FontAwesomeIcon icon={faCopyright} className='text-secondary w-4 h-4 mr-2 ml-2' />
                     {app_name}</div>
             </section>
-        </div>
+        </>
     )
 }
 

@@ -4,7 +4,7 @@ import LineChart from '../charts/line_chart';
 import Horizontal_Nav_Bar from '../components/horizontal_nav_bar';
 import VerticalNavBar from '../components/vertical_nav_bar';
 import { stats_mock } from '../mock/statsMock';
-import { countries, dashboard_counties_ranting_section_heading } from '../utils/airBnbConstants';
+import { countries, dashboard, dashboard_counties_ranting_section_heading } from '../utils/airBnbConstants';
 import CountryStatus from './components/country_status';
 import StatsCard from './components/stats_card';
 
@@ -13,7 +13,7 @@ const Dashboard = () => {
     <div className='flex justify-between relative'>
       <VerticalNavBar />
       <section className='flex flex-col w-full'>
-        <div className='text-primary font-bold text-6xl p-6'>Dashboard</div>
+        <div className='text-primary font-bold text-6xl p-6'>{dashboard}</div>
         <section className='flex justify-between m-6'>
           <div className='w-[65%]'>
             <LineChart />

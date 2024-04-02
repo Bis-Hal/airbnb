@@ -23,6 +23,7 @@ const config: Config = {
         'thailand': 'url("/thailand.png")',
         'england': 'url("/england.png")',
         'usa': 'url("/usa.png")',
+        'world': 'url("/world.png")',
       },
       colors:{
         "primary" : "#000000",
