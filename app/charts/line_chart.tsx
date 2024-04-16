@@ -10,7 +10,7 @@ import {
   Tooltip,
   Legend,
 } from 'chart.js';
-import { splineCurve } from 'chart.js/helpers';
+import { color, splineCurve } from 'chart.js/helpers';
 
 ChartJS.register(
   CategoryScale,
@@ -26,7 +26,15 @@ export const options = {
   responsive: true,
   plugins: {
     legend: {
-      position: 'top',
+      display:true,
+      // position: "bottom",
+      // align: 'end',
+      // fill:true,
+      // useBorderRadius: true,
+      // borderRadius: 150,
+      // fillStyle: 'rgb(255, 25, 25,1)',
+
+
     },
     title: {
       display: true,
@@ -39,39 +47,37 @@ export const data = {
 
   datasets: [
     {
-      label: "Thailand",
+      label: "Normal",
       tension: 0.4,
-      data: [65, 59, 80, 81, 56, 55, 40],
+      data: [6, 5, 8, 1, 5, 5, 4],
+      borderColor: 'rgb(255, 25, 25)',
+      backgroundColor: 'rgba(255, 255, 255, 0.5)',
+      fill: true,
+      pointBackgroundColor: 'rgba(75,192,192,1)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(75,192,192,1)'
+    },
+    {
+      label: "Festival",
+      tension: 0.4,
+      data: [1, 5, 6, 3, 1, 4, 6],
       borderColor: 'rgb(0, 0, 0)',
       backgroundColor: 'rgba(255, 255, 255, 0.5)',
     },
-    // {
-    //   label: "England",
-    //   tension: 0.4,
-    //   data: [70, 20, 40, 21, 76, 65, 70],
-    //   borderColor: 'rgb(255, 0, 0,1)',
-    //   backgroundColor: '',
-    // },
-    // {
-    //   label: "USA",
-    //   tension: 0.4,
-    //   data: [10, 20, 30, 25, 36, 35, 40],
-    //   borderColor: 'rgb(0, 255, 0,1)',
-    //   backgroundColor: '',
-    // },
-    // {
-    //   label: "Spain",
-    //   tension: 0.4,
-    //   data: [100, 90, 95, 100, 96, 55, 90],
-    //   borderColor: 'rgb(0, 0, 255,1)',
-    //   backgroundColor: '',
-    // },
-  
+    {
+      label: "New Year",
+      tension: 0.4,
+      data: [10, 11, 6, 3, 1, 6, 3],
+      borderColor: 'rgb(0, 0, 0)',
+      backgroundColor: 'rgba(255, 255, 255, 0.5)',
+    },
+
   ],
 };
 
-const LineChart = () => (
-  <Line data={data}/>
+const LineChart = ({ }) => (
+  <Line data={data} options={options} />
 );
 
 export default LineChart;

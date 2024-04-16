@@ -1,17 +1,16 @@
 'use client'
 
-import LineChart from '../charts/line_chart';
-import Horizontal_Nav_Bar from '../components/horizontal_nav_bar';
-import VerticalNavBar from '../components/vertical_nav_bar';
-import { stats_mock } from '../mock/statsMock';
-import { countries, dashboard, dashboard_counties_ranting_section_heading } from '../utils/airBnbConstants';
-import CountryStatus from './components/country_status';
-import StatsCard from './components/stats_card';
+import LineChart from '../../charts/line_chart';
+import VerticalNavBar from '../../components/vertical_nav_bar';
+import { stats_mock } from '../../mock/statsMock';
+import { countries, dashboard, dashboard_counties_ranting_section_heading, executiveNavBarItems } from '../../utils/airBnbConstants';
+import Status from '../components/status';
+import StatsCard from '../components/stats_card';
 
 const Dashboard = () => {
   return (
     <div className='flex justify-between relative'>
-      <VerticalNavBar />
+      <VerticalNavBar navBarItems={executiveNavBarItems} />
       <section className='flex flex-col w-full'>
         <div className='text-primary font-bold text-6xl p-6'>{dashboard}</div>
         <section className='flex justify-between m-6'>
@@ -25,7 +24,6 @@ const Dashboard = () => {
         <section className='w-full flex flex-col p-6'>
           <div className='text-2xl font-bold mb-6'>{dashboard_counties_ranting_section_heading}</div>
           <div className='flex justify-between items-center'>
-            {...countries.map((country, index) => <CountryStatus name={country.name} stats={country.stats} image={country.image} indicator={country.indicator} ranking={index + 1} key={index}/>)}
           </div>
         </section>
       </section>

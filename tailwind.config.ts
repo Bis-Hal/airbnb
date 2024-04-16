@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import { CITY_IMAGE, ENGLAND_IMAGE, USA_IMAGE } from "./app/utils/airBnbConstants";
 
 const config: Config = {
   content: [
@@ -10,24 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'logo': 'url("/logo.png")',
-        'h-logo': 'url("/logo.jpeg")',
-        'hero': 'url("/hero.webp")',
-        'city': 'url("/city.png")',
-        'airbnb': 'url("/airbnb.jpg")',
-        'profile': 'url("/usa.jpeg")',
-        'amsterdam': 'url("/amsterdam.png")',
-        'madrid': 'url("/madrid.png")',
-        'austria': 'url("/austria.png")',
-        'berlin': 'url("/berlin.png")',
-        'thailand': 'url("/thailand.png")',
-        'england': 'url("/england.png")',
-        'usa': 'url("/usa.png")',
-        'world': 'url("/world.png")',
+        'city': 'url("/images/city.png")',
+        'half': 'linear-gradient(to right, black 50%, white 50%)',
       },
       colors:{
         "primary" : "#000000",
-        "secondary" : "#ffffff"
+        "secondary" : "#ffffff",
       },
 
     

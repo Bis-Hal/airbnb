@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 
-const font = Josefin_Sans({ subsets: ["latin"],weight: "400"});
+const font = Josefin_Sans({ subsets: ["latin"],weight: "400", display: "swap"},);
 
 export const metadata: Metadata = {
   title: "Airbnb",

@@ -9,17 +9,16 @@ const baseStyle = 'group flex p-2 w-full justify-between hover:bg-secondary item
 interface VerticalNavBarProps {
   label: string,
   icon: IconProp,
-  selectedIndex: number,
+  selectedIndex: String,
   url : string,
-  setSelectedIndex: React.Dispatch<React.SetStateAction<number>>;
-  index: number
+  setSelectedIndex: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const VerticalNavBarItems: React.FC<VerticalNavBarProps> = ({ label ="" , icon  = faHome  , url = "", selectedIndex =0, setSelectedIndex, index}) => {
+const VerticalNavBarItems: React.FC<VerticalNavBarProps> = ({ label ="" , icon  = faHome  , url = "", selectedIndex ="Dashboard", setSelectedIndex}) => {
  
   return (
-    <Link href={url} onClick={()=>setSelectedIndex(index)}>
-      <div className={selectedIndex == index && label != "Log out" && label != "Register" ? baseStyle + 'border-l-4 border-secondary' : baseStyle + 'rounded-md'} >
+    <Link href={url} onClick={()=>setSelectedIndex(label)}>
+      <div className={selectedIndex == label ? baseStyle + 'border-l-4 border-secondary' : baseStyle + 'rounded-md'} >
         <div className='text-secondary group-hover:text-primary'>{label}</div>
         <FontAwesomeIcon icon={icon} className='text-secondary group-hover:text-primary' />
       </div>

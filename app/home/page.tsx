@@ -2,7 +2,6 @@ import { faAirbnb, faFacebook, faGoogle, faWhatsapp } from '@fortawesome/free-br
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { app_name, associated_cities, cities, copy_right, explore, slogon } from '../utils/airBnbConstants'
-import Horizontal_Nav_Bar from '../components/horizontal_nav_bar'
 import { faCopyright } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import { DASHBOARD_URL } from '../utils/url'
@@ -10,7 +9,6 @@ import { DASHBOARD_URL } from '../utils/url'
 const Home = () => {
     return (
         <>
-            <Horizontal_Nav_Bar />
             {/* hero section */}
             <section className=' bg-primary h-96 flex flex-col justify-between items-center'>
                 <div className='flex justify-between items-center w-full p-10'>
