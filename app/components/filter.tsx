@@ -1,7 +1,5 @@
 'use client'
 import React, { useState } from 'react'
-import Checkbox from '../customer/component/checkbox'
-import Dropdown from '../customer/component/dropdown'
 import { latitude, longitude, listOfCountriesMock, user_name } from '../utils/airBnbConstants'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarCheck, faCalendarDay, faCouch, faDoorClosed, faGlobe, faHome, faSignOut } from '@fortawesome/free-solid-svg-icons'
@@ -9,13 +7,16 @@ import Profile from './profile'
 import Link from 'next/link'
 import { SIGN_IN_URL } from '../utils/url'
 import DateTimePicker from 'react-datetime-picker'
+import Checkbox from '../dashboard/customer/component/checkbox'
+import Dropdown from '../dashboard/customer/component/dropdown'
 
 const Filter = () => {
     const mock = ["Small", "Medium", "Large", "Others"];
+    const amemities = ["Fan","Wifi","Fridge","Air Conditioner", "Parking"]
 
     return (
         <div className='w-[25%] h-screen bg-primary flex flex-col items-start justify-between sticky left-0 top-0'>
-            <div className='h-[95%] flex flex-col justify-between p-5'>
+            <div className='h-[95%] flex flex-col justify-between p-5 overflow-auto'>
                 <div className='flex'>
                     <FontAwesomeIcon icon={faCalendarCheck} className='w-5 h-5 text-secondary mr-2' />
                     <div className='text-secondary '>
@@ -67,11 +68,20 @@ const Filter = () => {
                         {...mock.map(mock => <Checkbox label={mock} />)}
                     </div>
                 </div>
+                <div className='flex flex-col items-start'>
+                    <div className='text-secondary mb-2 flex items-center'>
+                        <FontAwesomeIcon icon={faHome} className='w-5 h-5 mr-2' />
+                        <div>Amemities</div>
+                    </div>
+                    <div className='flex flex-wrap items-start justify-between'>
+                        {...amemities.map(mock => <Checkbox label={mock} />)}
+                    </div>
+                </div>
             </div>
             <Link href={SIGN_IN_URL} className='w-full'>
                 <div className='text-secondary flex justify-between items-center font-bold p-4 group hover:bg-secondary cursor-pointer w-full'>
                     <FontAwesomeIcon icon={faSignOut} className='w-5 h-5 group-hover:text-primary text-secondary' />
-                    <div className='group-hover:text-primary '>Log out</div>
+                    <div className='group-hover:text-primary '>Back</div>
                 </div>
             </Link>
 

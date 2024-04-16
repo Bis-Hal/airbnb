@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { cost_coordinates, explore, slogon_2 } from '../utils/airBnbConstants'
 import { CUSTOMER_DASHBOARD } from '../utils/url'
 import SignInCard from './components/sign_in_card'
+import CustomerDashboard from '../dashboard/customer/page'
 
 const AdminSignIn = () => {
 
@@ -17,7 +18,7 @@ const AdminSignIn = () => {
                     <Logo />
                     <div>
                         <div className='text-lg text-right w-96 p-2'>{slogon_2}</div>
-                        <Link href={CUSTOMER_DASHBOARD}><div className='bg-secondary text-primary w-96 p-3 text-center rounded-xl font-semibold text-xl hover:bg-gray-200'>{explore}</div></Link>
+                        <Link href={{pathname: CUSTOMER_DASHBOARD  , query:{selectedIndex:'3'}}}><div className='bg-secondary text-primary w-96 p-3 text-center rounded-xl font-semibold text-xl hover:bg-gray-200'>{explore}</div></Link>
                     </div>
                 </section>
                 <SignInCard />

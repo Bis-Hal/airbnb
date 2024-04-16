@@ -20,10 +20,15 @@ type NavBarItems = {
 type NavBarItemsObject = {
   [key: string]: NavBarItems;
 };
+interface verticalNavBarProps{
+  navBarItems:  NavBarItemsObject,
+  setSelectedIndex: React.Dispatch<React.SetStateAction<string>>
+  selectedIndex: string
+}
 
-const VerticalNavBar = ({ navBarItems }: { navBarItems: NavBarItemsObject })=> {
 
-  const [selectedIndex, setSelectedIndex] = useState('');
+const VerticalNavBar: React.FC<verticalNavBarProps> = ({ navBarItems, setSelectedIndex , selectedIndex})=> {
+
 
   return (
 

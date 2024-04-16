@@ -126,19 +126,19 @@ export const hotelOwnerNavBarItems ={
         {
             "icon": faHouse,
             "label":dashboard,
-            "url": EXECUTIVE_DASHBOARD_URL
+            "url": '#'
         },
     ],
     "Analytics":[
         {
             "icon": faMagnifyingGlassChart,
             "label":"Power BI",
-            "url": EXECUTIVE_DASHBOARD_URL
+            "url": '#'
         },
         {
             "icon": faUserSecret,
             "label":"MCDM",
-            "url": EXECUTIVE_DASHBOARD_URL
+            "url": '#'
         },
     ],
     "Auth": [

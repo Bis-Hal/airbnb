@@ -6,29 +6,40 @@ import { stats_mock } from '../../mock/statsMock';
 import { countries, dashboard, dashboard_counties_ranting_section_heading, executiveNavBarItems } from '../../utils/airBnbConstants';
 import Status from '../components/status';
 import StatsCard from '../components/stats_card';
+import { useState } from 'react';
+import Analytics from './analytics/page';
+import Prediction from './prediction/page';
 
-const Dashboard = () => {
+const ExecutiveDashboard = () => {
+  const [selectedIndex, setSelectedIndex] = useState('Dashboard');
+  const component = {
+    "Dashboard": <div className='w-full h-full flex'>
+      <div className='w-[65%]'>
+        <LineChart />
+      </div>
+      <div className='flex flex-col'>
+        {...stats_mock.map((mock, index) => <StatsCard title={mock.title} years={mock.years} indicator={mock.indicator} chart={mock.chart} stats={mock.stats} amount={mock.amount} key={index} />)}
+      </div>
+    </div>,
+    "Analytics": <Analytics />,
+    "Prediction": <Prediction />
+  }
   return (
     <div className='flex justify-between relative'>
-      <VerticalNavBar navBarItems={executiveNavBarItems} />
+      <VerticalNavBar navBarItems={executiveNavBarItems} selectedIndex={selectedIndex} setSelectedIndex={setSelectedIndex} />
       <section className='flex flex-col w-full'>
         <div className='text-primary font-bold text-6xl p-6'>{dashboard}</div>
         <section className='flex justify-between m-6'>
-          <div className='w-[65%]'>
-            <LineChart />
-          </div>
-          <div className='flex flex-col'>
-            {...stats_mock.map((mock, index) => <StatsCard title={mock.title} years={mock.years} indicator={mock.indicator} chart={mock.chart} stats={mock.stats} amount={mock.amount} key={index}/>)}
-          </div>
-        </section>
-        <section className='w-full flex flex-col p-6'>
-          <div className='text-2xl font-bold mb-6'>{dashboard_counties_ranting_section_heading}</div>
-          <div className='flex justify-between items-center'>
-          </div>
+          {
+            Object.entries(component).map((component) => (
+              component[0] == selectedIndex ? component[1] : null
+            ))
+          }
+
         </section>
       </section>
     </div>
   )
 }
 
-export default Dashboard
+export default ExecutiveDashboard

@@ -1,0 +1,19 @@
+Feature,Importance
+Has Availability_enc,0.35717046320504486
+Capacity,0.18138030263564237
+room_type,0.12605851090137182
+Latitude,0.09537941998418814
+property_type,0.06814072781648912
+country,0.0661741779154125
+Bathroom,0.06179459264197943
+Longitude,0.01806049482850274
+Availability_Percent_365,0.012459479091789703
+booked days,0.009525422527402875
+Host Acceptance Rate_enc,0.0028798259896688273
+Beds,0.0004365617622729847
+Number Of Reviews,0.0003531347219964093
+Nights_Ratio,0.0001868859782384233
+Host Total Listings Count_enc,0.0
+Instant Bookable_enc,0.0
+Years in Airbnb,0.0
+Rating_Group_enc,0.0

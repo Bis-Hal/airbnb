@@ -1,0 +1,19 @@
+Feature,Importance
+Longitude,0.295537140282819
+Number Of Reviews,0.24988541960794083
+Latitude,0.2216812283081994
+Nights_Ratio,0.16088130738797693
+country,0.030523227422345835
+Capacity,0.022338555197484074
+Instant Bookable_enc,0.01915312179323395
+Years in Airbnb,0.0
+Adj Price,0.0
+Availability_Percent_365,0.0
+booked days,0.0
+room_type,0.0
+Bathroom,0.0
+Host Total Listings Count_enc,0.0
+Host Acceptance Rate_enc,0.0
+Has Availability_enc,0.0
+Beds,0.0
+property_type,0.0

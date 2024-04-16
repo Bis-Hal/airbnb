@@ -1,0 +1,7 @@
+Feature,Importance
+room_type,0.15
+property_type,0.1
+country,0.25
+Instant Bookable_enc,0.01
+Adj_price,0.3
+Amenity,0.2

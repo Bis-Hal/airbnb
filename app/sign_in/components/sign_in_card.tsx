@@ -1,8 +1,10 @@
+import HotelOwnerDashboard from '@/app/dashboard/hotel_owner/page'
 import { sign_in, username, password, forgot_password, account_exist_qa, sign_up } from '@/app/utils/airBnbConstants'
 import {  EXECUTIVE_DASHBOARD_URL, HOME_URL, HOTLE_OWNER_DASHBOARD_URL } from '@/app/utils/url'
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
 const SignInCard = () => {
@@ -29,6 +31,8 @@ const SignInCard = () => {
     }
 
 
+
+
     return (
         <div className='flex flex-col justify-between items-start h-full'>
             <div className='text-5xl w-full p-2'>{sign_in.toUpperCase()}</div>
@@ -43,8 +47,9 @@ const SignInCard = () => {
                     <FontAwesomeIcon icon={isHidden ? faEyeSlash : faEye} onClick={() => setHiddentStatus(!isHidden)} className='w-6 h-6 p-2 absolute right-0' />
                 </div>
             </div>
-            <Link href={_username == 'Admin' ? EXECUTIVE_DASHBOARD_URL : HOTLE_OWNER_DASHBOARD_URL }><div className='bg-primary text-secondary w-96 p-3 text-center rounded-xl font-semibold text-xl hover:bg-zinc-800'>{sign_in}</div></Link>
-            
+            {/* <Link href={_username == 'Admin' ? EXECUTIVE_DASHBOARD_URL : HOTLE_OWNER_DASHBOARD_URL }><div className='bg-primary text-secondary w-96 p-3 text-center rounded-xl font-semibold text-xl hover:bg-zinc-800'>{sign_in}</div></Link> */}
+            <Link href={{pathname : _username == 'Admin' ? EXECUTIVE_DASHBOARD_URL : HOTLE_OWNER_DASHBOARD_URL, query:{selectedIndex:_username == 'Admin'? '0' : '1'} } }><div className='bg-primary text-secondary w-96 p-3 text-center rounded-xl font-semibold text-xl hover:bg-zinc-800'>{sign_in}</div></Link>
+            {/* <div className='bg-primary text-secondary w-96 p-3 text-center rounded-xl font-semibold text-xl hover:bg-zinc-800' onClick={()=> router.push('/dashboard/hotel_owner')}>{sign_in}</div> */}
         </div>
     )
 }
