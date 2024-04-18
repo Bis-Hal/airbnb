@@ -1,13 +1,19 @@
 'use client'
 import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import DropDownOption from './dropdown_option'
 import "/node_modules/flag-icons/css/flag-icons.min.css";
-
-
-const Dropdown = ({ placeholder = "", items = [""] }) => {
+interface DropDownProps{
+    placeholder: string,
+    items: string[],
+    handleChange : React.Dispatch<React.SetStateAction<string>>
+}
+const Dropdown : React.FC<DropDownProps> = ({ placeholder = "", items = [""], handleChange }) => {
     const [value, setValue] = useState(placeholder);
+    useEffect(()=>{
+        handleChange(value)
+    },[value])
     return (
         <div className='relative group w-full'>
             <div className='flex group-hover:cursor-pointer p-5 w-full h-12 justify-between items-center bg-secondary rounded-xl text-primary border-primary border-2 group-hover:rounded-br-none group-hover:border-b-0 group-hover:rounded-bl-none'>
